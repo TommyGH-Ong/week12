@@ -36,9 +36,9 @@ function updateImage(){
 
 const buttonContainer = document.querySelector(".button-container");
 console.log(buttonContainer)
-function bgChange(){
+function bgChange(event){
     // console.log("buttons clicked", event.target.tagName);
     if (event.target.tagName === "BUTTON")
     event.target.classList.add("greenBG")
-}
-buttonContainer.addEventListener("mouseover", bgChange)
+};
+buttonContainer.addEventListener("mouseover", bgChange);
