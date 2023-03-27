@@ -22,4 +22,14 @@ function changeText(){
 }
 buttonRef.addEventListener("click", changeText)
 
-
+function updateImage(){
+    const image = document.querySelector("#shoppingCart")
+    image.setAttribute(
+        "src",
+        "images/263142.png"
+    );
+    image.setAttribute("alt", "shopping Cart")
+    image.setAttribute("width", 50)
+    image.setAttribute("height", 50)
+}
+buttonRef.addEventListener("click", updateImage)
