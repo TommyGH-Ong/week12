@@ -34,11 +34,26 @@ function updateImage(){
 }
 // buttonRef.addEventListener("click", updateImage)
 
+// 1. find the element
 const buttonContainer = document.querySelector(".button-container");
+
+// 2. define a function
 console.log(buttonContainer)
 function bgChange(event){
     // console.log("buttons clicked", event.target.tagName);
-    if (event.target.tagName === "BUTTON")
-    event.target.classList.add("greenBG")
+    if (event.target.tagName === "BUTTON"){
+    event.target.classList.add("greenBG");
+    }
 };
+
+// 3. use addEventListener
 buttonContainer.addEventListener("mouseover", bgChange);
+
+function changeText(event) {
+    console.log(event.target.textContent)
+    // if red is clicked -> change the color to red
+    const color = event.target.textContent
+    // add inline style
+    event.target.style.color = color
+}
+buttonContainer.addEventListener("click", changeText);
