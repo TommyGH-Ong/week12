@@ -1,5 +1,21 @@
 const buttonRef = document.querySelector("button")
 
+function addNewButtonAndPara(){
+    // 2 x createElement()
+    const newButton = document.createElement("button")
+    // make this button respond to "mouseover" by changing its bg to green
+    const newPara = document.createElement("p")
+    // 2 x parent(document.body).appendChild()
+    document.body.appendChild(newButton)
+    document.body.appendChild(newPara)
+    // 2 x textContent .innerText
+    newButton.textContent = "purple"
+    newPara.textContent = "Some text"
+    newButton.addEventListener("mouseover", bgChange)
+}
+buttonRef.addEventListener("click", addNewButtonAndPara)
+// buttonRef.addEventListener("mouseover", bgChange)
+
 function alertUser() {
     alert("You clicked!!!")
     // buttonRef.removeEventListener("click", alertUser)
@@ -57,3 +73,4 @@ function changeText(event) {
     event.target.style.color = color
 }
 buttonContainer.addEventListener("click", changeText);
+
